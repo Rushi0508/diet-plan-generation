@@ -76,7 +76,7 @@ export default function Home() {
     try {
       setGenerating(true)
       setIsGenerated(false)
-      const response = await fetch('http://localhost:3000/api/generate-plan', {
+      const response = await fetch('/api/generate-plan', {
         method: 'POST',
         body: JSON.stringify(formValues),
         headers: {
