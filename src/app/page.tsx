@@ -83,7 +83,7 @@ export default function Home() {
           'Content-Type': 'application/json'
         }
       })
-      const data = await response.json()
+      const data = response;
       if (data.hasOwnProperty("meal_plan")) {
         setResponse(data)
         setIsGenerated(true)

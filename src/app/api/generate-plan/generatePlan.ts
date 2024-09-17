@@ -1,9 +1,7 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
-
-const genAi = new GoogleGenerativeAI(process.env.NEXT_GEMINI_API!);
+import { genAi } from "@/app/utils/genAi";
 
 export const generatePlan = async (body: any) => {
-  const model = await genAi.getGenerativeModel({ model: "gemini-pro" });
+  const model = genAi.getGenerativeModel({ model: "gemini-pro" });
   const prompt =
     "I am creating an application where users can generate diet plan based on their preferences. Here are my preferences and details\n" +
     "I am giving you the preferences in json so that you can understand it better\n" +
@@ -44,7 +42,7 @@ export const generatePlan = async (body: any) => {
 
   const result = await model.generateContent(prompt);
   const response =
-    (await result?.response?.candidates?.[0]?.content?.parts[0]?.text?.toString()) ||
+    result?.response?.candidates?.[0]?.content?.parts[0]?.text?.toString() ||
     "Default response";
 
   const cleanedJsonString = response.replace(/```json|```/g, "").trim();
