@@ -1,0 +1,81 @@
+[
+  {
+    "title": "Basic Information",
+    "data": [
+      {
+        "title": "Age",
+        "type": "number"
+      },
+      {
+        "title": "Weight",
+        "type": "number"
+      },
+      {
+        "title": "Height",
+        "type": "number"
+      }
+    ]
+  },
+  {
+    "title": "Dietary Preferences",
+    "data": [
+      {
+        "title": "Diet Type",
+        "type": "select",
+        "options": [
+          "Any",
+          "Vegan",
+          "Vegetarian",
+          "Non-Vegetarian",
+          "Keto",
+          "Paleo"
+        ]
+      },
+      {
+        "title": "Intolerances",
+        "type": "checkbox",
+        "options": ["Dairy", "Gluten", "Peanuts", "Eggs", "Fish", "Lactose"]
+      }
+    ]
+  },
+  {
+    "title": "Health Goals",
+    "data": [
+      {
+        "title": "Goal",
+        "type": "select",
+        "options": ["Lose Weight", "Gain Muscle", "Maintain Weight"]
+      },
+      {
+        "title": "Activity Level",
+        "type": "select",
+        "options": [
+          "Sedentary",
+          "Lightly Active",
+          "Moderately Active",
+          "Very Active"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Life Style Details",
+    "data": [
+      {
+        "title": "Work environment",
+        "type": "select",
+        "options": ["Desk Job", "Field Job", "Active Job"]
+      },
+      {
+        "title": "Sleep Schedule",
+        "type": "select",
+        "options": [
+          "Very Good",
+          "Normal",
+          "Sightly Disturbed",
+          "Highly Disturbed"
+        ]
+      }
+    ]
+  }
+]
