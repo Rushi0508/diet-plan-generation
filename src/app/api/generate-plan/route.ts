@@ -5,7 +5,7 @@ import { generatePlan } from "./generatePlan";
 
 export async function POST(req: Request) {
   try {
-    let body = await req.json();
+    const body = await req.json();
     const plan = await generatePlan(body);
     console.log(plan);
     return NextResponse.json(plan);
